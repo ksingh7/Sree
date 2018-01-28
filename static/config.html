@@ -37,17 +37,17 @@
     </div>
     <div class="panel_body">
         <div class="form-group row">
-            <label for="endpointInput" class="col-md-2 form-control-label">S3 Endpoint</label>
+            <label for="endpointInput" class="col-md-2 form-control-label">Ceph S3 Endpoint</label>
             <div class="col-md-8">
-                <input class="form-control" id="endpointInput" placeholder="http://s3.amazonaws.com">
+                <input class="form-control" id="endpointInput" placeholder="http://ceph-object-storage-endpoint">
             </div>
         </div>
-        <div class="form-group row">
+       <!--  <div class="form-group row">
             <label for="regionInput" class="col-md-2 form-control-label">Region</label>
             <div class="col-md-8">
                 <input class="form-control" id="regionInput" placeholder="us-east-1">
             </div>
-        </div>
+        </div> -->
         <div class="form-group row">
             <label for="accessKeyInput" class="col-md-2 form-control-label">Access Key ID</label>
             <div class="col-md-8">
@@ -83,7 +83,7 @@
         var saveButton = $('#save');
         saveButton.click(function() {
             var endpoint = $('#endpointInput').val().trim(),
-                region = $('#regionInput').val().trim(),
+                region = 'us-east-1' ,
                 accessKeyId = $('#accessKeyInput').val().trim(),
                 secretKeyId = $('#secretKeyInput').val().trim(),
                 acl = $('#acl').val().trim();

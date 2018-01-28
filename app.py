@@ -138,7 +138,7 @@ def listbucketsurl():
 
 @app.route("/")
 def root():
-    return app.send_static_file('buckets.html')
+    return app.send_static_file('config.html')
 
 @app.route("/<path:path>")
 def static_files(path):
