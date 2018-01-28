@@ -60,12 +60,12 @@
                 <input class="form-control" id="secretKeyInput" placeholder="">
             </div>
         </div>
-        <div class="form-group row">
+       <!--  <div class="form-group row">
             <label for="acl" class="col-md-2 form-control-label">File-upload ACL</label>
             <div class="col-md-8">
                 <input class="form-control" id="acl" placeholder="public-read">
             </div>
-        </div>
+        </div> -->
         <div class="form-group row">
             <div class="col-md-10">
                 <button class="btn btn-info fr" id="save">Save</button>
@@ -86,7 +86,7 @@
                 region = 'us-east-1' ,
                 accessKeyId = $('#accessKeyInput').val().trim(),
                 secretKeyId = $('#secretKeyInput').val().trim(),
-                acl = $('#acl').val().trim();
+                acl = 'public-read';
             window.localStorage.setItem('endpoint', endpoint);
             window.localStorage.setItem('region', region);
             window.localStorage.setItem('accessKeyId', accessKeyId);
